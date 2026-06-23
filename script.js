@@ -1,9 +1,7 @@
-// funções de validação
 function validarCPF(cpf) {
     const cleanCpf = cpf.replace(/\D/g, '');
     if (cleanCpf.length !== 11) return false;
     
-    // Evita CPFs conhecidos como inválidos (ex: 111.111.111-11)
     if (/^(\d)\1{10}$/.test(cleanCpf)) return false;
     
     let soma = 0;
@@ -38,7 +36,6 @@ function validarTelefone(tel) {
     return tel.replace(/\D/g, '').length >= 10;
 }
 
-// funções de ui para erros xdxd
 function exibirErro(idCampo, mensagem) {
     const campo = document.getElementById(idCampo);
     if (!campo) return;
@@ -61,7 +58,6 @@ function limparErros(form) {
     mensagensErro.forEach(msg => msg.remove());
 }
 
-// cadastro de livro
 function iniciarCadastroLivro() {
     const form = document.getElementById('form-livro');
     if (!form) return;
@@ -120,7 +116,6 @@ function iniciarCadastroLivro() {
     });
 }
 
-// cadastro de cliente
 function iniciarCadastroCliente() {
     const form = document.getElementById('form-clientes');
     if (!form) return;
@@ -150,7 +145,7 @@ function iniciarCadastroCliente() {
             temErro = true; 
         }
         if (!validarCPF(cpf)) { 
-            exibirErro('cliente-cpf', "CPF inválido (deve conter 11 números)."); 
+            exibirErro('cliente-cpf', "CPF inválido (deve conter 10 números)."); 
             temErro = true; 
         }
         if (!endereco) { 
@@ -165,7 +160,6 @@ function iniciarCadastroCliente() {
     });
 }
 
-// inicialização
 document.addEventListener('DOMContentLoaded', function () {
     iniciarCadastroLivro();
     iniciarCadastroCliente();
