@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  label {
+    @apply block mb-[5px] font-semibold text-[0.85rem];
+  }
+  table {
+    @apply w-full border-collapse min-w-[500px];
+  }
+  th, td {
+    @apply text-left py-3 px-2 border-b border-[#edf2f7] text-[0.9rem];
+  }
+  th {
+    @apply bg-[#f8fafc] font-semibold;
+  }
+  input, select {
+    @apply w-full p-3 border border-[#e2e8f0] rounded-md text-base bg-white focus:outline-none focus:border-primary focus:ring-[3px] focus:ring-primary/10;
+  }
+  body {
+    @apply bg-light text-dark leading-normal font-sans;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-md no-underline text-[0.85rem] font-semibold cursor-pointer border-none transition-[filter] duration-200 hover:brightness-90;
+  }
+  .btn-edit {
+    @apply bg-primary text-white;
+  }
+  .btn-save {
+    @apply bg-success text-white w-full p-3.5 text-base mt-2.5;
+  }
+  .btn-back {
+    @apply no-underline text-primary font-semibold;
+  }
+  .menu-card {
+    @apply flex items-center no-underline font-bold rounded-lg overflow-hidden shadow-[0_2px_4px_rgba(0,0,0,0.05)] transition-all duration-200 active:scale-[0.98] border border-transparent;
+  }
+  .icon-box {
+    @apply text-white p-5 text-2xl w-[70px] h-[70px] flex items-center justify-center;
+  }
+  .menu-card-vendas {
+    @apply bg-[#ecfdf5] border-[#a7f3d0]/50 text-[#059669] hover:bg-[#d1fae5] hover:border-[#a7f3d0];
+  }
+  .menu-card-vendas .icon-box {
+    @apply bg-[#10b981];
+  }
+  .menu-card-livro {
+    @apply bg-[#eff6ff] border-[#bfdbfe]/50 text-[#2563eb] hover:bg-[#dbeafe] hover:border-[#bfdbfe];
+  }
+  .menu-card-livro .icon-box {
+    @apply bg-[#3b82f6];
+  }
+  .menu-card-clientes {
+    @apply bg-[#faf5ff] border-[#e9d5ff]/50 text-[#7c3aed] hover:bg-[#f3e8ff] hover:border-[#e9d5ff];
+  }
+  .menu-card-clientes .icon-box {
+    @apply bg-[#8b5cf6];
+  }
+  .book-img {
+    @apply w-full h-[270px] object-cover rounded-lg cursor-pointer transition-all duration-300 shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:-translate-y-2 hover:shadow-[0_10px_15px_rgba(0,0,0,0.15)];
+  }
+  .content-box {
+    @apply bg-white p-[15px] rounded-lg shadow-[0_2px_10px_rgba(0,0,0,0.05)] mb-5;
+  }
+  .content-header {
+    @apply flex flex-col gap-2.5 mb-[15px] sm:flex-row sm:justify-between sm:items-center;
+  }
+  .form-row {
+    @apply flex flex-col gap-2.5 md:flex-row md:flex-wrap;
+  }
+  .form-group {
+    @apply mb-[15px] md:flex-1 md:min-w-[150px];
+  }
+  .error-input {
+    @apply !border-[#ff4d4d] !bg-[#fff2f2];
+  }
+  .error-message {
+    @apply text-[#ff4d4d] text-xs mt-1 block font-medium;
+  }
+}
