@@ -1,0 +1,36 @@
+# Dependências (O mais importante para resolver o seu erro)
+node_modules/
+/.pnp
+.pnp.js
+
+# Produção / Builds (Arquivos gerados pelo comando de build)
+dist/
+dist-ssr/
+build/
+
+# Variáveis de ambiente locais (Contêm senhas/chaves de API secretas)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs de erro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Pasta temporária do Vite
+.vite/
+
+# Arquivos de sistema e editores (Opcional, mas recomendado)
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
