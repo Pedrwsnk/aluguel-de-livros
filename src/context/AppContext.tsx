@@ -121,7 +121,6 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
     setCustomers((prev) => [...prev, newCustomer]);
   };
 
-  // Base values from original project (Vendas = 56, Alugueis = 49) + dynamically added count
   const salesCount = 56 + books.filter(b => b.finalidade === 'venda').length - INITIAL_BOOKS.filter(b => b.finalidade === 'venda').length;
   const rentalsCount = 49 + books.filter(b => b.finalidade === 'aluguel').length - INITIAL_BOOKS.filter(b => b.finalidade === 'aluguel').length;
 

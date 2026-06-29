@@ -87,7 +87,7 @@ export const CadastroLivro: React.FC = () => {
 
       alert(`Sucesso! Os dados do livro '${nome}' foram verificados corretamente.`);
       
-      // Reset form
+      // resetar formulário
       setNome('');
       setAutor('');
       setEditora('');
